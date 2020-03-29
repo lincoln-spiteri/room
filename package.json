@@ -4,20 +4,23 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
+    "dev": "nodemon ./bin/www",
     "build-client": "webpack"
   },
   "dependencies": {
     "@types/sdp-transform": "^2.4.3",
     "cookie-parser": "~1.4.4",
+    "cors": "^2.8.5",
     "debug": "~2.6.9",
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
     "jade": "~1.11.0",
     "mediasoup": "^3.5.5",
-    "mediasoup-client": "^3.6.2",
     "morgan": "~1.9.1"
   },
   "devDependencies": {
+    "mediasoup-client": "^3.6.2",
+    "nodemon": "^2.0.2",
     "ts-loader": "^6.2.2",
     "typescript": "^3.8.3"
   }
