@@ -1,6 +1,7 @@
-import { Device } from "mediasoup-client";
+const Device = MediasoupClient.Device;
 
-let device = new Device();
+const device = new Device();
+
 
 // const transportSenderOption = {
 //    id:

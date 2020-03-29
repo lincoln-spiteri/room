@@ -1,7 +1,8 @@
 const path = require('path');
 
 module.exports = {
-    mode: "development",
+    mode: "production",
+    devtool: 'source-map',
     entry: './node_modules/mediasoup-client/src/index.ts',
     resolve: {
         extensions: [ '.tsx', '.ts', '.js' ],
@@ -16,6 +17,11 @@ module.exports = {
     },
     output: {
         path: path.resolve(__dirname, 'public/javascripts'),
-        filename: 'mediasoup-client.js'
-    }
+        filename: 'mediasoup-client.js',
+        library: 'MediasoupClient',
+        libraryTarget: 'umd',
+        // libraryExport: ['Device'],
+        // globalObject: 'this'
+    },
+    target: 'web'
 };
