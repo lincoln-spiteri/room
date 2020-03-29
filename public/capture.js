@@ -1,16 +1,17 @@
-const constraints = {
-    video: true
-};
+let video;
 
-const video = document.getElementById('video');
+function startUp() {
 
-async function streamer() {
+    video = document.getElementById('video');
 
-    const stream = await navigator.mediaDevices.getUserMedia(constraints);
+    navigator.mediaDevices.getUserMedia( {video: true} )
+        .then((stream) => {
 
+            video.srcObject = stream;
+            video.play();
+        })
 }
 
-streamer();
-
+startUp();
 
 
